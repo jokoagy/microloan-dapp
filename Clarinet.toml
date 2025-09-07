@@ -1,0 +1,28 @@
+[project]
+name = 'microloan-dapp'
+description = ''
+authors = []
+telemetry = true
+cache_dir = '.\.cache'
+requirements = []
+[contracts.collateral-vault]
+path = 'contracts/collateral-vault.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.loan-agreement]
+path = 'contracts/loan-agreement.clar'
+clarity_version = 3
+epoch = '3.2'
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
